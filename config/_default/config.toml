@@ -1,0 +1,73 @@
+baseURL = "https://ekuut.github.io/"
+title = "數理筆記 | ekuut"
+theme = "DoIt"
+defaultContentLanguage = "zh-tw"
+defaultContentLanguageInSubdir = true
+hasCJKLanguage = true
+paginate = 10
+enableRobotsTXT = true
+
+[outputs]
+  home = ["HTML", "RSS", "JSON"]
+
+[markup.goldmark.renderer]
+  unsafe = true
+
+[languages]
+  [languages.zh-tw]
+    languageName = "繁體中文"
+    weight = 1
+    title = "數理筆記 | ekuut"
+    [languages.zh-tw.params]
+      description = "高中數學與科學的學習筆記"
+    [[languages.zh-tw.menu.main]]
+      identifier = "posts"
+      name = "文章"
+      url = "/zh-tw/posts/"
+      weight = 10
+  [languages.en]
+    languageName = "English"
+    weight = 2
+    title = "Math Notes | ekuut"
+    [languages.en.params]
+      description = "Learning notes on high school mathematics and science"
+    [[languages.en.menu.main]]
+      identifier = "posts"
+      name = "Posts"
+      url = "/en/posts/"
+      weight = 10
+  [languages.nan]
+    languageName = "Taigi"
+    weight = 3
+    title = "Sòo-lí Bí-kì | ekuut"
+    [languages.nan.params]
+      description = "Kok-kó͘ ha̍k sò͘-lí ê bâng-chaî bî-ki"
+    [[languages.nan.menu.main]]
+      identifier = "posts"
+      name = "Bûn-chió"
+      url = "/nan/posts/"
+      weight = 10
+
+[params]
+  version = "0.4.0"
+  author = "ekuut"
+  defaultTheme = "auto"
+  [params.header]
+    themeChangeMode = "manual"
+  [params.footer]
+    enable = true
+    hugo = true
+    copyright = "© 2024 ekuut"
+  [params.page]
+    math = true
+    toc = true
+    lightgallery = true
+  [params.social]
+    github = "https://github.com/ekuut"
+
+[menu]
+  [[menu.main]]
+    identifier = "home"
+    name = "Home"
+    url = "/"
+    weight = 1
