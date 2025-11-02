@@ -1,0 +1,40 @@
+[app]
+  title = "數理筆記"
+
+[header]
+  [header.title]
+    logo = ""
+    name = "數理筆記"
+    pre = ""
+    post = ""
+    typeit = false
+  themeChangeMode = "manual"
+
+[footer]
+  enable = true
+  custom = "以多語言記錄高中數學與自然科學筆記"
+  hugo = true
+  author = true
+
+[sidebar]
+  emoji = "📘"
+  subtitle = "高中數學與科學札記"
+
+[page]
+  toc = true
+  math = true
+
+[page.share]
+  enable = true
+
+[page.readingTime]
+  enable = true
+
+[page.lightgallery]
+  enable = true
+
+[page.code]
+  copy = true
+
+[page.comments]
+  enable = false
