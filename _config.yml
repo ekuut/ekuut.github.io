@@ -1,0 +1,11 @@
+title: Ekuu 數理筆記
+remote_theme: mmistakes/minimal-mistakes
+plugins:
+  - jekyll-include-cache
+markdown: kramdown
+kramdown:
+  math_engine: mathjax
+sass:
+  style: compressed
+  load_paths:
+    - assets/css
