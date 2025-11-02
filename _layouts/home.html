@@ -2,19 +2,25 @@
 layout: default
 ---
 
-{% include nav.html %}
+<div class="page__inner-wrap">
+  {% include nav.html %}
 
-<h1>{{ site.title }}</h1>
-<p>{{ site.description }}</p>
+  <div class="page__content" role="main">
+    <header class="page__header">
+      <h1 class="page__title">{{ site.title }}</h1>
+      <p class="page__lead">{{ site.description }}</p>
+    </header>
 
-<section>
-  <h2>最新文章</h2>
-  <ul>
-  {% for post in site.posts %}
-    <li>
-      <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
-      <small>（{{ post.date | date: "%Y-%m-%d" }}）</small>
-    </li>
-  {% endfor %}
-  </ul>
-</section>
+    {% assign intro = content | strip %}
+    {% if intro != '' %}
+    <div class="page__intro">
+      {{ content }}
+    </div>
+    {% endif %}
+
+    <section class="archive">
+      <h2 class="archive__subtitle">最新文章</h2>
+      {% include posts.html %}
+    </section>
+  </div>
+</div>

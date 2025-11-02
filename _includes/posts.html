@@ -1,8 +1,12 @@
-<ul>
-  {% for post in site.posts %}
-    <li>
-      <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
-      <small>（{{ post.date | date: "%Y-%m-%d" }}）</small>
+{% if site.posts.size > 0 %}
+<ul class="post-list">
+  {% for post in site.posts limit:5 %}
+    <li class="post-list__item">
+      <a class="post-link" href="{{ post.url | relative_url }}">{{ post.title }}</a>
+      <small class="post-meta">{{ post.date | date: "%Y-%m-%d" }}</small>
     </li>
   {% endfor %}
 </ul>
+{% else %}
+<p class="notice">文章即將上線，敬請期待！</p>
+{% endif %}
